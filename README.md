@@ -3,8 +3,8 @@
 
 ## Student Details
 
-- **Full Name:** `<Enter name>`
-- **CCID:** `<Enter ccid>`
+- **Full Name:** Kathan Ashishkumar Shah
+- **CCID:** `kathanas
 
 ## References and Resources
 
