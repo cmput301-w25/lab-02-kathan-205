@@ -7,23 +7,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Add City button -->
+
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/text_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name" />
-
-    <ListView
-        android:id="@+id/city_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_add_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="ADD CITY"
+        app:layout_constraintEnd_toStartOf="@id/button_delete_city"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Delete City button -->
+    <Button
+        android:id="@+id/button_delete_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE CITY"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toEndOf="@id/button_add_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </ListView>
+    <!-- ListView for displaying city list -->
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_add_city" />
+
+    <!-- EditText for city name input, initially hidden -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
